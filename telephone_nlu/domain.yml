@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+ - call_contact:
+    use_entities:
+      PERSON
+ - delete_contact:
+    use_entities:
+      PERSON
+ - call_number:
+    use_entities:
+      phone_number
+ - save_contact:
+    use_entities:
+      phone_number
+      PERSON
+ - call_hold:
+     use_entities: []
+ - call_mute:
+     use_entities: []
+ - call_reject:
+     use_entities: []
+ - call_accept:
+     use_entities: []
+ - call_terminate:
+     use_entities: []
+
+entities:
+ - PERSON
+ - phone_number
+
+slots:
+  PERSON:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: PERSON
+    influence_conversation: false
+  phone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone_number
+    influence_conversation: false
+      
+actions:
+ - action_call_contact
+ - action_call_number
+ - action_call_hold
+ - action_call_mute
+ - action_call_reject
+ - action_call_accept
+ - action_call_terminate
+ - action_save_contact
+ - action_delete_contact
+
+
+

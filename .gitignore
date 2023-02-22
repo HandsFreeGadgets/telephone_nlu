@@ -1,0 +1,9 @@
+venv
+.idea
+baresip
+testbuild
+.rasa
+*.egg-info
+results
+build
+__pycache__

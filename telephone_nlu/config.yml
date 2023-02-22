@@ -1,0 +1,34 @@
+recipe: default.v1
+
+language: de
+
+pipeline:
+  - name: SpacyNLP
+    model: "de_core_news_md"
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON"]
+  - name: DIETClassifier
+    constrain_similarities: true
+    epochs: 300
+#  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    constrain_similarities: true
+    epochs: 300
+  - name: FallbackClassifier
+    threshold: 0.7
+
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+  - name: "MemoizationPolicy"
+    max_history: 3

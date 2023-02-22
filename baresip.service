@@ -1,0 +1,15 @@
+[Unit]
+Description=baresip
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+User=hands-free-user
+Group=hands-free-user
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=screen -D -m -S baresip -L -Logfile %h/.baresip/logs/baresip.log baresip
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

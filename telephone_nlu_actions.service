@@ -1,0 +1,16 @@
+[Unit]
+Description=Hands-Free Telephone NLU Actions Server
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+User=handsfree
+Group=handsfree
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=screen -D -m -S telephone_nlu_actions -L -Logfile /home/handsfree/hands_free_telephone/log/telephone_nlu_actions.log bash -c telephone_nlu_actions -vv'
+ExecStop=screen -X -S telephone_nlu_actions quit
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

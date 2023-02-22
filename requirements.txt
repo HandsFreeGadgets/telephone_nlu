@@ -1,0 +1,9 @@
+confluent-kafka @ https://github.com/HandsFreeGadgets/python-wheels/releases/download/v0.1/confluent_kafka-1.9.2-cp38-cp38-linux_aarch64.whl ; platform_machine=='aarch64'
+tensorflow @ https://github.com/HandsFreeGadgets/python-wheels/releases/download/v0.1/tensorflow-2.8.4-cp38-cp38-linux_aarch64.whl ; platform_machine=='aarch64'
+tensorflow-addons @ https://github.com/HandsFreeGadgets/python-wheels/releases/download/v0.1/tensorflow_addons-0.17.1-cp38-cp38-linux_aarch64.whl ; platform_machine=='aarch64'
+tensorflow-text @ https://github.com/HandsFreeGadgets/python-wheels/releases/download/v0.1/tensorflow_text-2.8.2-cp38-cp38-linux_aarch64.whl ; platform_machine=='aarch64'
+rasa==3.4.2
+SQLAlchemy==1.4.45
+phonetics==1.0.5
+de-core-news-md @ https://github.com/explosion/spacy-models/releases/download/de_core_news_md-3.4.0/de_core_news_md-3.4.0-py3-none-any.whl
+  

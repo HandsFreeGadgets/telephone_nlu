@@ -1,0 +1,160 @@
+version: "3.1"
+
+nlu:
+- intent: call_number
+  examples: |
+    -  Rufe [0172701223456]{"entity": "phone_number"} an
+    -  Ruf [017581934954]{"entity": "phone_number"}
+    -  Ruf [017581934954]{"entity": "phone_number"} an
+    -  Ruf die [110]{"entity": "phone_number"}
+    -  Rufe [0351 8012843]{"entity": "phone_number"} an
+    -  Rufe [05542 7103234]{"entity": "phone_number"} an
+    -  Rufe [01516478312]{"entity": "phone_number"} an
+    -  Verbinde mich mit [0341 1234612]{"entity": "phone_number"}
+    -  Rufe [0211 2774545]{"entity": "phone_number"} an
+    -  Ruf [0982 12445668]{"entity": "phone_number"}
+    -  Wähle [0421 75235453]{"entity": "phone_number"}
+    -  Wähle [eins zwei drei vier]{"entity": "phone_number"}
+    -  Wähle [plus sieben acht neun eins zwei fünf]{"entity": "phone_number"}
+    -  Wähle [null sieben acht neun eins zwei fünf drei acht neun eins fünf]{"entity": "phone_number"}
+    -  Wähle [+493125333412]{"entity": "phone_number"}
+    -  Verbinde mich mit [+49176 4231278]{"entity": "phone_number"}
+    -  Verbinde mich mit [plus 49 151 4365463]{"entity": "phone_number"}
+- intent: call_contact
+  examples: |
+    -  Rufe [Sylvana]{"entity": "PERSON"} an
+    -  Rufe [Renate]{"entity": "PERSON"} an
+    -  Rufe [Lothar]{"entity": "PERSON"} an
+    -  Rufe [Karsten]{"entity": "PERSON"} an
+    -  Ruf [Thomas]{"entity": "PERSON"} an
+    -  Ruf [Donald Duck]{"entity": "PERSON"} an
+    -  Rufe [Klaudia]{"entity": "PERSON"} an
+    -  Ruf [Katja]{"entity": "PERSON"} [Ebstein]{"entity": "PERSON"} an
+    -  Ruf [Gildo]{"entity": "PERSON"} [Horn]{"entity": "PERSON"} an
+    -  [Beate]{"entity": "PERSON"} anrufen
+    -  [Stefan]{"entity": "PERSON"} anrufen
+    -  [Ingo]{"entity": "PERSON"} anrufen
+    -  [Uwe]{"entity": "PERSON"} anrufen
+    -  [Renate]{"entity": "PERSON"} anrufen
+    -  [Erwin]{"entity": "PERSON"} anrufen
+    -  Verbinde mich mit [Olaf]{"entity": "PERSON"}
+    -  Verbinde mich mit [Helene]{"entity": "PERSON"} [Fischer]{"entity": "PERSON"}
+    -  Verbinde mit [Torsten]{"entity": "PERSON"}
+    -  Verbinde mit [Oliver]{"entity": "PERSON"}
+    -  Wähle die Nummer von [Dorin]{"entity": "PERSON"}
+    -  Verbindung mit [Andreas]{"entity": "PERSON"} herstellen
+    -  Verbinde mich telefonisch mit [Jörg]{"entity": "PERSON"}
+    -  Baue eine Telefonverbindung mit [Gustav]{"entity": "PERSON"} auf
+    -  Baue eine Telefonverbindung zu [Achmet]{"entity": "PERSON"} auf
+- intent: call_hold
+  examples: |
+    - Anruf halten
+    - halten
+    - halte Anruf
+- intent: call_mute
+  examples: |
+    - Anruf stumm
+    - stumm schalten
+    - Anruf stumm schalten
+    - stummschalten
+    - stumm
+- intent: call_reject
+  examples: |
+    - Anruf anlehnen
+    - ablehnen
+    - abweisen
+    - jetzt nicht
+- intent: call_accept
+  examples: |
+    - Anruf annehmen
+    - annehmen
+    - abnehmen
+    - nimm an
+    - hebe ab
+    - heb ab
+- intent: call_terminate
+  examples: |
+    - auflegen
+    - Anruf beenden
+    - lege auf
+    - beenden
+    - Ende
+    - Verbindung beenden
+    - Verbindung mit [Lothar]{"entity":"PERSON"} beenden
+    - Verbindung mit [Ingrid]{"entity":"PERSON"} [Sakowski]{"entity":"PERSON"} beenden
+    - Bitte die Telefonverbindung beenden
+    - Bitte das Telefongespräch beenden
+    - Telefongespräch beenden
+    - abbrechen
+- intent: delete_contact
+  examples: |
+    - Lösche [Mutti]{"entity": "PERSON"}
+    - Lösche [Peter]{"entity": "PERSON"}
+    - Lösche [Peter]{"entity": "PERSON"} von den Kontakten
+    - Entferne [Markus]{"entity": "PERSON"}
+    - Entferne [Peter]{"entity": "PERSON"} aus dem Telefonbuch
+    - Entferne [Ingrid]{"entity": "PERSON"} aus den Kontakten
+    - Lösche [Peter]{"entity": "PERSON"} aus den Kontakten
+    - Lösche [Sybille]{"entity": "PERSON"} von den Kontakten
+    - Lösche [Ulf]{"entity": "PERSON"} aus dem Telefonbuch
+- intent: save_contact
+  examples: |
+    -  Speichere [Mutti]{"entity": "PERSON"} unter [92432 2432]{"entity": "phone_number"}
+    -  Speichere [Mustafa]{"entity": "PERSON"} unter [980 12 345]{"entity": "phone_number"}
+    -  Speichere [Bäckerei]{"entity": "PERSON"} [Eishold]{"entity": "PERSON"} unter [1234 567]{"entity": "phone_number"}
+    -  Speichere [Karsten]{"entity": "PERSON"} unter der Nummer [0176 7123 9123]{"entity": "phone_number"} 
+    -  Speichere [Vati]{"entity": "PERSON"} unter der Telefonnummer [1245 45 4545]{"entity": "phone_number"} 
+    -  Speichere für [Olaf]{"entity": "PERSON"} die Nummer [01531 12321234]{"entity": "phone_number"}
+    -  Speichere unter [Ludwig]{"entity": "PERSON"} die Nummer [0171 1243 123]{"entity": "phone_number"}
+    -  Speichere unter [Sarah]{"entity": "PERSON"} die Telefonnummer [0341 5412344]{"entity": "phone_number"}
+    -  Speichere für [Randolf]{"entity": "PERSON"} die Telefonnummer [01512 2934 2399]{"entity": "phone_number"}
+    -  Speichere [Jana]{"entity": "PERSON"} als [0161 30123451]{"entity": "phone_number"}
+    -  Speichere [Ute]{"entity": "PERSON"} [Schaffner]{"entity": "PERSON"} als [1234 09983]{"entity": "phone_number"}
+    -  Speichere [03518190231]{"entity": "phone_number"} unter [Sylvana]{"entity": "PERSON"}
+    -  Speichere die Nummer [0566577667]{"entity": "phone_number"} unter [Helga]{"entity": "PERSON"}
+    -  Speichere die Nummer [view drei acht nein null fünf eins]{"entity": "phone_number"} unter [Markus]{"entity": "PERSON"}
+    -  Speichere die Telefonummer [null eins drei vier fünf drei acht]{"entity": "phone_number"} unter [Schmidt]{"entity": "PERSON"}
+    -  Speichere [eins drei vier neun sieben zwei neun drei eins]{"entity": "phone_number"} unter [Ingo]{"entity": "PERSON"}
+    -  Speichere [0176 893 18 23]{"entity": "phone_number"} in Kontakt [Thomas]{"entity": "PERSON"}
+    -  Speichere [+49 35631 345 10 23]{"entity": "phone_number"} als [Lothar]{"entity": "PERSON"}
+    -  Speichere [345 10 23]{"entity": "phone_number"} als [Ernst]{"entity": "PERSON"}
+    -  Speichere [10 627 124]{"entity": "phone_number"} als [Harald]{"entity": "PERSON"} [Böhmermann]{"entity": "PERSON"}
+    -  Speichere [null eins sieben sechs drei vier zwo fünf acht]{"entity": "phone_number"} als [Ernst]{"entity": "PERSON"}
+    -  Speichere [7012378]{"entity": "phone_number"} unter [Gisela Müller]{"entity": "PERSON"}
+    -  Speichere [Yvonne]{"entity": "PERSON"} unter der Telefonnummer [01512 2934 2399]{"entity": "phone_number"}
+    -  Sichere [Detlef]{"entity": "PERSON"} unter der Telefonnummer [01512 2934 2399]{"entity": "phone_number"}
+    -  Speichere [Detlef]{"entity": "PERSON"} im Telefonbuch mit der Telefonnummer [01512 2934 2399]{"entity": "phone_number"}
+    -  Speichere [Detlef]{"entity": "PERSON"} [Sost]{"entity": "PERSON"} im Telefonbuch mit der Telefonnummer [779 2934 2399]{"entity": "phone_number"}
+    -  Speichere den Kontakt [Helga]{"entity": "PERSON"} [Hahnemann]{"entity": "PERSON"} unter der Nummer [01512 2934 2399]{"entity": "phone_number"}
+    -  [Roswitha]{"entity": "PERSON"} ist unter [0161 30123451]{"entity": "phone_number"} erreichbar
+    -  [Johanna]{"entity": "PERSON"} ist unter der Nummer [654 3434]{"entity": "phone_number"} erreichbar
+    -  [Ahmed]{"entity": "PERSON"} [Schweizer]{"entity": "PERSON"} ist unter der Nummer [654 3434]{"entity": "phone_number"} erreichbar
+    -  [Sarah]{"entity": "PERSON"} ist unter der Telefonnummer [123 3434]{"entity": "phone_number"} erreichbar
+    -  Lege [Jochen]{"entity": "PERSON"} als [781 283 34]{"entity": "phone_number"} an
+    -  Lege [Margit]{"entity": "PERSON"} mit [03521 78312]{"entity": "phone_number"} an
+    -  Lege neuen Kontakt [Helene]{"entity": "PERSON"} mit der Nummer [431 5643]{"entity": "phone_number"} an
+    -  Lege neuen Kontakt [Heinrich]{"entity": "PERSON"} [Ursel]{"entity": "PERSON"} mit der Nummer [89 78787]{"entity": "phone_number"} an
+    -  Lege einen neuen Kontakt [Wilma]{"entity": "PERSON"} mit der Nummer [431 5643]{"entity": "phone_number"} an
+    -  Lege neuen Kontakt [Barbara]{"entity": "PERSON"} mit der Telefonnummer [871 5643]{"entity": "phone_number"} an
+    -  Lege den Kontakt [Erich]{"entity": "PERSON"} [Fink]{"entity": "PERSON"} mit der Telefonnummer [871 12345]{"entity": "phone_number"} an
+    -  Lege den Kontakt [Klaus]{"entity": "PERSON"} [Fink]{"entity": "PERSON"} mit der Nummer [871 12345]{"entity": "phone_number"} an
+    -  Merke [0331 456 7890]{"entity": "phone_number"} als [Uwe Lampe]{"entity": "PERSON"}
+    -  Merke Dir [0241 41332423]{"entity": "phone_number"} als [Mutti]{"entity": "PERSON"}
+    -  Merke [053487651234]{"entity": "phone_number"} unter [Uwe Lampe]{"entity": "PERSON"}
+    -  Speichere [053487651234]{"entity": "phone_number"} unter [Uwe Lampe]{"entity": "PERSON"}
+    -  Die Telefonnummer von [Renate]{"entity": "PERSON"} ist [02127893412]{"entity": "phone_number"}
+    -  Die Handynummer von [Horst]{"entity": "PERSON"} ist [plus 3418911920]{"entity": "phone_number"}
+    -  Die Nummer von [Horst]{"entity": "PERSON"} ist [plus 8010123]{"entity": "phone_number"}
+    -  Die Nummer von [Doris]{"entity": "PERSON"} [König]{"entity": "PERSON"} ist [plus 8010123]{"entity": "phone_number"}
+    -  Speichere [null eins sieben drei sieben null null sieben zwei zwo fünf eins]{"entity": "phone_number"} unter [Karsten]{"entity": "PERSON"}
+    -  Speichere [plus fünf sieben drei sieben null null sieben zwei zwo fünf sieben]{"entity": "phone_number"} unter [Sarah]{"entity": "PERSON"}
+- regex: phone_number
+  examples: |
+    - (?:(?:plus|[+])?\s*)?(?:\d[\s\d]+)
+    - (?:(?:plus|[+])?\s*)?(?:[eins|zwei|zwo|drei|vier|fünf|sechs|sieben|acht|neun|null][\s[eins|zwei|zwo|drei|vier|fünf|sechs|sieben|acht|neun|null]]+)
+- intent: out_of_scope
+  examples: |
+    - Ich will schlafen
+    - Ich habe Hunger
+
+

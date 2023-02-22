@@ -1,0 +1,29 @@
+version: "3.1"
+
+responses:
+  utter_contact_not_given:
+    - text: "Der Kontakt wurde nicht benannt oder erkannt. Bitte wiederhole den Befehl.\n"
+  utter_number_not_given:
+    - text: "Die Telefonnummer wurde nicht benannt oder erkannt. Bitte wiederhole den Befehl.\n"
+  utter_default:
+    - text: "Das habe ich nicht verstanden. Kannst Du das anders formulieren.\n"
+  utter_please_rephrase:
+    - text: "Das habe ich nicht verstanden. Kannst Du das anders formulieren.\n"
+  utter_out_of_scope:
+    - text: "Das habe ich nicht verstanden oder kann ich nicht.\n"
+  utter_dial_contact:
+    - text: "Ich rufe {PERSON} an.\n"
+  utter_dial_number:
+    - text: "Ich wähle {phone_number}.\n"
+  utter_number_missing:
+    - text: "Die Telefonnummer fehlt oder wurde nicht verstanden.\n"
+  utter_person_missing:
+    - text: "Der Kontaktname fehlt oder wurde nicht verstanden.\n"
+  utter_telephone_database_error:
+    - text: "Bei dem Zugriff auf die Datenbank ist eine Fehler aufgetreten. Bei andauernden Auftritt dieses Fehler Service kontaktieren. \n"
+  utter_saved_contact:
+    - text: "Die Nummer {number} wurde unter {name} gespeichert.\n"
+  utter_deleted_contact:
+    - text: "Der Kontakt {name} wurde gelöscht.\n"
+  utter_telephone_person_not_found:
+    - text: "Der Kontakt {person} ist unbekannt.\n"

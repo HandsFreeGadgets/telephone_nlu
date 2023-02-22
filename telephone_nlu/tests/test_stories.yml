@@ -1,0 +1,93 @@
+version: "3.1"
+
+stories:
+- story: Calling by name
+  steps:
+  - user: |
+      Rufe [Renate]{"entity": "PERSON"} an
+    intent: call_contact
+  - action: action_call_contact
+
+- story: Calling by name
+  steps:
+  - user: |
+      Ruf [Magda]{"entity": "PERSON"} an
+    intent: call_contact
+  - action: action_call_contact
+
+- story: Calling by name 
+  steps:
+  - user: |
+      Verbinde mich mit [Helmut]{"entity": "PERSON"}
+    intent: call_contact
+  - action: action_call_contact
+
+- story: Calling by name 
+  steps:
+  - user: |
+      Baue eine Telefonverbindung zu [Irena]{"entity": "PERSON"} auf
+    intent: call_contact
+  - action: action_call_contact
+
+- story: Calling by name 
+  steps:
+  - user: |
+      Verbinde mich mit [Claudia]{"entity": "PERSON"} auf
+    intent: call_contact
+  - action: action_call_contact
+      
+- story: Terminate call 
+  steps:
+  - user: |
+      beenden
+    intent: call_terminate
+  - action: action_call_terminate
+- story: Terminate call 
+  steps:
+  - user: |
+      Gespräch beenden
+    intent: call_terminate
+  - action: action_call_terminate
+
+- story: Terminate call 
+  steps:
+  - user: |
+      auflegen
+    intent: call_terminate
+  - action: action_call_terminate
+
+- story: Save contact 
+  steps:
+  - user: |
+      Speichere [Max]("entity":"PERSON") unter [+4917670012345]("entity":"phone_number")
+    intent: save_contact
+  - action: action_save_contact
+
+- story: Save contact 
+  steps:
+  - user: |
+      Sichere [Igor]("entity":"PERSON") unter [+4917670012345]("entity":"phone_number")
+    intent: save_contact
+  - action: action_save_contact
+
+- story: Save contact double name 
+  steps:
+  - user: |
+      speichere [Yvonne Zander]("entity":"PERSON") im Telefonbuch mit der Telefonnummer [+4917670012345]("entity":"phone_number")
+    intent: save_contact
+  - action: action_save_contact
+
+- story: Save contact, dial and hangup 
+  steps:
+  - user: |
+      speichere [Karsten]("entity":"PERSON") unter [+4935112345]("entity":"phone_number")
+    intent: save_contact
+  - action: action_save_contact
+  - user: |
+      Rufe [Karsten]{"entity": "PERSON"} an
+    intent: call_contact
+  - action: action_call_contact
+  - user: |
+      auflegen
+    intent: call_terminate
+  - action: action_call_terminate

@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+  - story: Save contact, dial and hangup
+    steps:
+      - intent: save_contact
+        entities:
+          - PERSON: "Karsten"
+          - phone_number: "+4917670012345"
+      - action: action_save_contact
+      - intent: call_contact
+        entities:
+          - PERSON: "Karsten"
+      - action: action_call_contact
+      - intent: call_terminate
+      - action: action_call_terminate
